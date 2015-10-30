@@ -42,7 +42,7 @@ app.get('/index', function(req, res) {
 //Email from hire page ,[handeling post request]
 app.post('/hire', function (req, res) {
   
-  var sendgrid  = require('sendgrid')('gmailsharedtasks', 'Anu.maher*2');
+  var sendgrid  = require('sendgrid')(config.username, config.password);
   var email     = new sendgrid.Email({
   to:       'jitin.maher@gmail.com',
   from:     req.body.email,
